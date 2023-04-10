@@ -1,0 +1,29 @@
+<template>
+    <div class="Tabs">
+        <lightning-tabset variant="scoped">
+             <!-- Summary Tab contents-->
+            <lightning-tab label="Summary">
+                <c-portfolio-summary 
+                record-id={recordId} 
+                object-api-name={objectApiName}></c-portfolio-summary>
+            </lightning-tab>
+            <!-- Personal Projects contents-->
+            <lightning-tab label="Personal Projects">
+                <c-portfolio-personal-projects></c-portfolio-personal-projects>
+            </lightning-tab>
+            <!-- Work Experience contents-->
+            <lightning-tab label="Work Experience">
+                Work Experience Content !
+            </lightning-tab>
+            <lightning-tab label="Skills">
+                Skills Content !
+            </lightning-tab>
+            <lightning-tab label="Education">
+                Education Content !
+            </lightning-tab>
+            <lightning-tab label="Certifications">
+                Certification Content !
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+</template>

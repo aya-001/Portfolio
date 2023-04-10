@@ -1,0 +1,18 @@
+<template>
+    <div class="userDetailsAndStatsWrapper">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12">
+               <c-portfolio-user-details 
+               record-id={recordId}
+               object-api-name={objectApiName}
+               resume-url={resumeUrl}></c-portfolio-user-details>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <c-portfolio-user-status
+                rank={rank}
+                badges={badges}
+                points={points}></c-portfolio-user-status>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

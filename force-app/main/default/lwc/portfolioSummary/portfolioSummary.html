@@ -1,0 +1,12 @@
+<template>
+    <!-- get info from Salesforce -->
+    <lightning-record-edit-form 
+    record-id={recordId} 
+    object-api-name={objectApiName}>
+        <lightning-layout>
+            <lightning-layout-item size="12">
+                <lightning-output-field field-name="Summary__c" variant="label-hidden"></lightning-output-field>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-record-edit-form>
+</template>
