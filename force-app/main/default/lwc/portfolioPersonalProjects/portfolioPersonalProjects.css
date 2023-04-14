@@ -4,6 +4,7 @@
     margin: auto;
     text-align: center;
     font-family: arial;
+    margin: 10px;
   }
   
   
@@ -19,7 +20,7 @@
     font-size: 18px;
   }
   
-  .card .bottom:hover{
+  .card .bottom:hover, .card .referCode:hover{
     opacity: 0.4;
   }
 
@@ -29,10 +30,11 @@
 
     .referCode{
       text-align: center;
-      color: black;
-      font-size: 18px;
+      color: rgb(31, 30, 34);
+      font-size: 17px;
       padding: 10px;
       background: rgb(243 235 180);
+      max-width: 300px;
     }
 
     

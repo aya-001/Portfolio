@@ -2,20 +2,77 @@ import { LightningElement } from 'lwc';
 import PortfolioAssets from '@salesforce/resourceUrl/PortfolioAssets'
 
 export default class PortfolioPersonalProjects extends LightningElement {
-    CTTracing = `${PortfolioAssets}/PortfolioAssets/Projects/contactTracing.jpg`
+    CTTracing = `${PortfolioAssets}/PortfolioAssets/Projects/ContactTracing.png`
     Calculator = `${PortfolioAssets}/PortfolioAssets/Projects/SimpleCalculator.png`
     StudentRegister = `${PortfolioAssets}/PortfolioAssets/Projects/StuentRefistrationApp(Js.html.css).png`
+    SLDSPage = `${PortfolioAssets}/PortfolioAssets/Projects/SLDSPage.png`
+    BMICalculator = `${PortfolioAssets}/PortfolioAssets/Projects/BMICalculator.png`
+    AlarmClock = `${PortfolioAssets}/PortfolioAssets/Projects/AlarmClock.png`
+    CurrencyCalculator = `${PortfolioAssets}/PortfolioAssets/Projects/CurrencyCalculator.png`
+    WeatherApp = `${PortfolioAssets}/PortfolioAssets/Projects/WeatherApp.png`
+    Survey = `${PortfolioAssets}/PortfolioAssets/Projects/Survey.png`
+    NoteApp = `${PortfolioAssets}/PortfolioAssets/Projects/NoteApp.png`
 
     projects=[
         {
             "name":"Contact Tracing App",
             "img" : this.CTTracing,
-            "link":"https://github.com/aya-001/Salesforce-Projects-2/blob/master/ContactTracingVideo.mp4"
+            "link":"https://github.com/aya-001/Salesforce-Projects-2/blob/master/ContactTracingVideo.mp4",
+            "code" :"https://github.com/aya-001/Salesforce-Projects-2"
         },
         {
-            "name":"Contact Tracing App",
-            "img" : this.CTTracing,
-            "link":"https://github.com/aya-001/Salesforce-Projects-2/blob/master/ContactTracingVideo.mp4"
+            "name":"Simple Calculator",
+            "img" : this.Calculator,
+            "link":"https://github.com/aya-001/Portfolio/blob/master/Calculate_AppVideo.mp4",
+            "code":"https://github.com/aya-001/Portfolio/tree/master/force-app/main/default/lwc/calculatorLWC"
+        },
+        {
+            "name":"Student Registeration App",
+            "img" : this.StudentRegister,
+            "link":"https://github.com/aya-001/LWC-SLDS-Project/blob/master/Student_Registration_App.mp4",
+            "code":"https://github.com/aya-001/LWC-SLDS-Project/tree/master/Student%20Registration%20App"
+        },
+        {
+            "name":"SLDS Page/Google Map",
+            "img" : this.SLDSPage,
+            "link":"https://github.com/aya-001/LWC-SLDS-Project/blob/master/SLDS_Project.mp4",
+            "code":"https://github.com/aya-001/LWC-SLDS-Project/tree/master/SLDS%20Simple%20Page"
+        },
+        {
+            "name":"BMI Calculator App",
+            "img" : this.BMICalculator,
+            "link":"",
+            "code":""
+        },
+        {
+            "name":"AlarmClock App",
+            "img" : this.AlarmClock,
+            "link":"",
+            "code":""
+        },
+        {
+            "name":"CurrencyCalculator App",
+            "img" : this.CurrencyCalculator,
+            "link":"",
+            "code":""
+        },
+        {
+            "name":"Weather App",
+            "img" : this.WeatherApp,
+            "link":"",
+            "code":""
+        },
+        {
+            "name":"Survey App",
+            "img" : this.Survey,
+            "link":"",
+            "code":""
+        },
+        {
+            "name":"Note App",
+            "img" : this.NoteApp,
+            "link":"",
+            "code":""
         },
 
 

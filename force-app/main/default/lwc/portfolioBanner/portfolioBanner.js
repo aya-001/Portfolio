@@ -14,7 +14,7 @@ export default class PortfolioBanner extends LightningElement {
     @api gitHubUrl = "https://github.com/aya-001?tab=repositories";
     
 
-    @api userPic = `${PortfolioAssets}/PortfolioAssets/profilePic.jpg`;
+    @api userPic = `${PortfolioAssets}/PortfolioAssets/portfolioPhoto.png`;
     @api linkedin = `${PortfolioAssets}/PortfolioAssets/Social/linkedin.svg`;
     @api gitHub = `${PortfolioAssets}/PortfolioAssets/Social/github.svg`;
     
