@@ -18,7 +18,7 @@ export default class PortfolioEducation extends LightningElement {
         parentRecordId:'$recordId',
         relatedListId:'Education__r', 
         fields:['Education__c.InstitutionName__c','Education__c.Title__c','Education__c.GraduationYear__c'], 
-        sortBy:['Education__c.GraduationYear__c']
+        /* sortBy:['Education__c.GraduationYear__c'] */
     })EducationHandler({data, error}){
         if(data){
             console.log("Education Data", JSON.stringify(data))
@@ -30,7 +30,7 @@ console.error(error)
     }
 
     formatData(data){
-        this.tableData = [...data.records].reverse().map(item=>{
+        this.tableData = data.records.map(item=>{
             let Id = item.Id
             const {InstitutionName__c,Title__c, GraduationYear__c} = item.fields
             let Institution = InstitutionName__c.value

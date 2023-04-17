@@ -19,12 +19,26 @@ img{
 }
 
 h2{
+    /* background: rgb(54, 54, 153); */
     color: black;
     padding: 8px 0px;
+    margin: 10px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: 600;
     border-bottom: solid 4px black;
-    width: 600px;
 }
 
+/* Smart Phone */
+@media(max-width: 540px){
+   h2 .phone-view{
+        /*  to make the page fit the screen size */
+        width: 100vw;
+    }
+}
+/* Laptop */
+@media(max-width: 1280px){
+   h2 .tablet-view{
+        width: 600px;
+    }
+}
