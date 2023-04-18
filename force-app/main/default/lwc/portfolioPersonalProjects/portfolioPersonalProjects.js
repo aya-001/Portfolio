@@ -41,13 +41,13 @@ export default class PortfolioPersonalProjects extends LightningElement {
         {
             "name":"BMI Calculator App",
             "img" : this.BMICalculator,
-            "link":"",
-            "code":""
+            "link":"https://sfdx-portfolio-aya-dev-ed.develop.my.site.com/bmi-calculator?",
+            "code":"https://github.com/aya-001/Portfolio/tree/master/force-app/main/default/lwc/bmiCalculator"
         },
         {
             "name":"AlarmClock App",
             "img" : this.AlarmClock,
-            "link":"",
+            "link":"https://sfdx-portfolio-aya-dev-ed.develop.my.site.com/alarm-clock",
             "code":""
         },
         {
@@ -68,13 +68,13 @@ export default class PortfolioPersonalProjects extends LightningElement {
             "link":"",
             "code":""
         },
-        {
+       /*  {
             "name":"Note App",
             "img" : this.NoteApp,
             "link":"",
             "code":""
         },
-
+ */
 
     ]
 
