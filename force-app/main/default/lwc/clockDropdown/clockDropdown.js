@@ -19,4 +19,15 @@ export default class ClockDropdown extends LightningElement {
         this.dispatchEvent(new CustomEvent('optionhandler',{detail:{label:this.label,value:value}}))
     }
     
+
+    //reset the values of option selection
+    @api 
+    reset(value){
+        this.template.querySelector('select').value = value
+        this.callparent(value)
+    
+        console.log("template.querySelector is",this.template.querySelector('select').value )
+    }
+       
+    
 }

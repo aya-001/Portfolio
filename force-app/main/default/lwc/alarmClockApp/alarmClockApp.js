@@ -13,15 +13,28 @@ export default class AlarmClockApp extends LightningElement {
   meridiemSelected
   alarmTime
   isAlarmSet = false
+  isAlarmTriggered = false  /* to shake Image */
   
 //call functions
-//when element is added into property, connectedCallback()
+//when element is added into property, connectedCallback() is called
   connectedCallback(){
     this.currentTimeHandler()
     this.createHoursOptions()
     this.createMinutesOptions()
   }
 
+
+   //buttom ON OFF
+  //when all the field are not filled
+  get isFieldNotSelected(){
+    return !(this.hourSelected && this.minSelected && this.meridiemSelected)
+  }
+
+  //if this.isAlarmTriggered is true, pass "shake" to HTML class name
+  get shakeImage(){
+    return this.isAlarmTriggered ? 'shake': ''
+  }
+  
 
 //get the surrent time
 //repeat this functionevery second
@@ -47,6 +60,9 @@ export default class AlarmClockApp extends LightningElement {
 
     if(this.alarmTime ==`${hour}:${min} ${amPm}`){
       console.log("Alarm Triggered!")
+
+      //to shake Image, make  isAlarmTriggered true
+      this.isAlarmTriggered = true
     }
     }, 1000)
   
@@ -87,16 +103,30 @@ export default class AlarmClockApp extends LightningElement {
   }
 
 
-  //buttom ON OFF
-  //when all the field are not filled
-  get isFieldNotSelected(){
-    return !(this.hourSelected && this.minSelected && this.meridiemSelected)
-  }
-
 //set alarm time
   setAlarmHandler(){
     this.alarmTime = `${this.hourSelected}:${this.minSelected} ${this.meridiemSelected}`
     this.isAlarmSet = true
+
+    console.log("Alarm is set, Alarm Time:" , this.alarmTime)
+  }
+
+  //reset all the values
+  clearAlarmHandler(){
+    this.alarmTime = ''
+    this.isAlarmSet = false
+    this.isAlarmTriggered = false
+   /*  this.hourSelected = ''
+    this.minSelected = ''
+    this.meridiemSelected = '' */
+
+    //take property from html
+    const elements = this.template.querySelectorAll('c-clock-dropdown')
+    //reset value ofeach element  from  elements's Array
+    //call reset method from clockDrop.js
+    Array.from(elements).forEach(elem=>{ elem.reset("") })
+
+    console.log("Array of elements:",elements)
 
   }
 
