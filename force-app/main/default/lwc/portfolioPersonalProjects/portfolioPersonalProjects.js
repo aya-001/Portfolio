@@ -48,7 +48,7 @@ export default class PortfolioPersonalProjects extends LightningElement {
             "name":"AlarmClock App",
             "img" : this.AlarmClock,
             "link":"https://sfdx-portfolio-aya-dev-ed.develop.my.site.com/alarm-clock",
-            "code":""
+            "code":"https://github.com/aya-001/Portfolio/tree/master/force-app/main/default/lwc/alarmClockApp"
         },
         {
             "name":"CurrencyCalculator App",

@@ -5,17 +5,25 @@
         <h2>{currentTime}</h2>
         <div class="slds-grid slds-gutters">
             <div class="slds-col">
-            <span>Hours</span>
+                <c-clock-dropdown label="Hour(s)" options={hours} unique-id="select-hours" onoptionhandler={optionhandler}></c-clock-dropdown>
             </div>
             <div class="slds-col">
-            <span>Minutes</span>
+                <c-clock-dropdown label="Minute(s)" options={minutes} unique-id="select-minutes" onoptionhandler={optionhandler}></c-clock-dropdown>
             </div>
             <div class="slds-col">
-            <span>AM/PM</span>
+                <c-clock-dropdown label="AM/PM" options={meridiem} unique-id="select-ampm" onoptionhandler={optionhandler}></c-clock-dropdown>
             </div>
-            </div>
-            <button class="slds-button slds-button_neutral slds-button_stretch">
-                Set Alarm
-            </button>
+
+
+        </div>
+        <button class="slds-button slds-button_neutral slds-button_stretch"
+        disabled={isFieldNotSelected} onclick={setAlarmHandler}><!-- Field is NOT Selected = true -->
+            Set Alarm
+        </button>
+
+        <button class="slds-button slds-button_neutral slds-button_stretch"
+        disabled={isFieldNotSelected} onclick={clearAlarmHandler}><!-- Field is NOT Selected = true -->
+            Clear Alarm
+        </button>
     </div>
 </template>
