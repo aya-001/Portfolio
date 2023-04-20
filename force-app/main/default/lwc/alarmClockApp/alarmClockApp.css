@@ -32,12 +32,17 @@ button{
     border-color: yellow;
 }
 
+.button-color{
+    background: orange;
+    border-color: orange;
+}
+
 img{
     display: block;
     margin: 20px auto;
 }
 
-
+/* when dynamic class is 'shake, image shakes */
 img.shake{
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;

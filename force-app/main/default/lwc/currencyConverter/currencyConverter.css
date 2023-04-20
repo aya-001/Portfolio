@@ -1,0 +1,55 @@
+
+.currency-app{
+    background: url(/sfsites/c/resource/currencyConverterAssets/currencyConverterAssets/currencyAppBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.slds-card{
+    background: #2e2e46;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+img{
+    display: block;
+    margin: 20px auto;
+}
+
+.input{
+    padding: 5px;
+}
+
+.from, .to{
+    margin: 20px;
+}
+
+.icon{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.baseline{
+    display: flex;
+    align-items: baseline;
+  }
+
+button{
+    background: #ffbc00;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 350px;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    border-color: #ffbc00;
+}

@@ -3,7 +3,8 @@ import AlarmClockAssets from '@salesforce/resourceUrl/AlarmClockAssets';
 
 
 export default class AlarmClockApp extends LightningElement {
-  clockImage = AlarmClockAssets+'/AlarmClockAssets/clock.png'
+  clockImage = AlarmClockAssets +'/AlarmClockAssets/clock.png'
+  ringtone = new Audio(AlarmClockAssets +`/AlarmClockAssets/Clocksound.mp3`) 
   currentTime = ''
   hours = []
   minutes = []
@@ -58,11 +59,16 @@ export default class AlarmClockApp extends LightningElement {
 
     this.currentTime = `${hour}:${min}:${sec}:${amPm}`
 
+    //make the Alarm go off
     if(this.alarmTime ==`${hour}:${min} ${amPm}`){
       console.log("Alarm Triggered!")
 
       //to shake Image, make  isAlarmTriggered true
       this.isAlarmTriggered = true
+
+      //make ringtone go off, repeatedly
+      this.ringtone.play()
+      this.ringtone.loop = true
     }
     }, 1000)
   
@@ -116,6 +122,7 @@ export default class AlarmClockApp extends LightningElement {
     this.alarmTime = ''
     this.isAlarmSet = false
     this.isAlarmTriggered = false
+    this.ringtone.pause()
    /*  this.hourSelected = ''
     this.minSelected = ''
     this.meridiemSelected = '' */
