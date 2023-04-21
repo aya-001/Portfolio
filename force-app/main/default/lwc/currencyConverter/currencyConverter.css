@@ -26,10 +26,14 @@ img{
 
 .input{
     padding: 5px;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .from, .to{
     margin: 20px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .icon{
@@ -40,6 +44,24 @@ img{
 .baseline{
     display: flex;
     align-items: baseline;
+  }
+
+  .icon-design{
+    --slds-c-icon-color-background:#ffbc00;
+    --slds-c-icon-color-foreground:rgb(16, 16, 100); 
+    --slds-c-icon-color-foreground-default:#ffbc00;
+    transform: rotate(45deg);
+  }
+
+  .result{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .result-color{
+    color: orange;
   }
 
 button{

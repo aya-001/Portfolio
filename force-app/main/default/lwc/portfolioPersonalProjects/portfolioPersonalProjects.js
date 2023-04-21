@@ -53,8 +53,8 @@ export default class PortfolioPersonalProjects extends LightningElement {
         {
             "name":"CurrencyCalculator App",
             "img" : this.CurrencyCalculator,
-            "link":"",
-            "code":""
+            "link":"https://sfdx-portfolio-aya-dev-ed.develop.my.site.com/currency-converter",
+            "code":"https://github.com/aya-001/Portfolio/tree/master/force-app/main/default/lwc/currencyConverter"
         },
         {
             "name":"Weather App",
