@@ -59,7 +59,7 @@ export default class PortfolioPersonalProjects extends LightningElement {
         {
             "name":"Weather App",
             "img" : this.WeatherApp,
-            "link":"",
+            "link":"https://sfdx-portfolio-aya-dev-ed.develop.my.site.com/weather-app",
             "code":""
         },
         {

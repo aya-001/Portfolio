@@ -1,0 +1,126 @@
+.weather-app{
+    background: #29313c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.slds-cards{
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+}
+
+header{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.loading-succeeded{
+    font-size: 18px;
+    margin: 20px;
+    text-align: center;
+    background: #dfdef5;
+    color: #922cc7;
+}
+
+.loading-failed{
+    font-size: 18px;
+    margin: 20px;
+    text-align: center;
+    background: #f7d1d1;
+    color: red;
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+}
+
+input{
+    padding: 10px;
+    font-size: 20px;
+    border-color: #ebe5e5;
+    outline: none;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid pink;
+}
+
+input::placeholder{
+    color:rgb(235, 229, 229);
+}
+
+button{
+    background: red;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: red;
+    font-size: 18px;
+    color: white;
+}
+
+.picture{
+    padding-top: 10px;
+}
+
+section{
+    border: solid 1px #efe9e9;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.degrees{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.description{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.location{
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic{
+    width: 20px;
+} 
+
+.feelslike, .humidity{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-left{
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+}
+
+.footer-right{
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    border-left: solid 1px #efe9e9;
+    width: 100%;
+}

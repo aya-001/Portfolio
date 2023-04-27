@@ -5,8 +5,8 @@ import {countryCodeList} from 'c/countryCodeList' //service component
 export default class CurrencyConverter extends LightningElement {
     currencyImage = currencyConverterAssets +'/currencyConverterAssets/currency.svg'
     countryList = countryCodeList
-    countryFrom = "USD"
-    countryTo = "JPY"
+    countryFrom = "JPY"
+    countryTo = "USD"
     result
     error
     amount = ''
