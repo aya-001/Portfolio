@@ -8,7 +8,7 @@
 }
 
 .slds-cards{
-    max-width: 400px;
+    min-width: 300px;
     margin: 20px auto;
     background: white;
     border-radius: 15px;
@@ -20,6 +20,9 @@ header{
     font-size: 18px;
     font-weight: 500;
     border-bottom: 1px solid #e1e1e1;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .loading-succeeded{
@@ -68,13 +71,14 @@ button{
 }
 
 .picture{
-    padding-top: 10px;
+    padding: 15px;
 }
 
 section{
     border: solid 1px #efe9e9;
     text-align: center;
     padding-bottom: 10px;
+    border-radius: 15px;
 }
 
 .degrees{

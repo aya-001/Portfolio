@@ -2,12 +2,15 @@
    <div class="weather-app">
         <div class="slds-cards">
             <header>
+                <template if:true={response}>
+                    <img src={arrowImage} alt="Arrow Back" onclick={backHandler} class="slds-m-right_medium"/>
+                </template>
                 <h1>Weather App</h1>
             </header>
             <template if:true={loadingText}>
                 <div class={loadingClass}>{loadingText}</div>
             </template>
-            <template if:false={resose}>
+            <template if:false={response}>
                 <section>
                     <form onsubmit={submitHandler}>
                         <input type="text" 
@@ -24,35 +27,35 @@
             </template>
             
             <!-- showing weather screen -->
-            <template if:true={resonse}>
+            <template if:true={response}>
                 <section>
                     <div class="temperature">
                         <div class="picture">
-                            <image src={weatherImage} alt="Weather Image" height="100px" width="100px"></image>
+                            <image src={weatherIcon} alt="Weather Image" height="100px" width="100px"></image>
                         </div>
-                        <span class="degrees">{resonse.temperature}</span>
+                        <span class="degrees">{response.temperature}</span>
                         <span class="degrees">C°</span>
                     </div>
-                    <div class="description">{resonse.descrition}</div>
+                    <div class="description">{response.descrition}</div>
                     <div class="location">
                         <div >
                             <image class="pic" src={locationImage} alt="Location Image" height="100px" width="100px"></image>
                         </div>
-                        <span>{resonse.location}</span>
+                        <span>{response.location}</span>
                     </div>
                 </section>
                 <footer>
                     <div class="footer-left">
                         <div class="feelslike">
                             <image class="pic" src={feelslikeImage} alt="Feelslike Image" height="100px" width="100px"></image>
-                            <div>{resonse.feels_like}C°</div>
+                            <div>{response.feels_like}C°</div>
                         </div>
                         <p>Feels like</p>
                     </div>
                     <div class="footer-right">
                         <div class="humidity">
                             <image class="pic" src={humidityImage} alt="Humidity Image" height="100px" width="100px"></image>
-                            <div>{resonse.humidity}</div>
+                            <div>{response.humidity}</div>
                         </div>
                         <p>Humidity</p>
                     </div>
