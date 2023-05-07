@@ -1,0 +1,36 @@
+<template>
+    <div class="app">
+        <div class="box box-centeralize" onclick={createNoteHandler}>
+            <div class="dotted-circle">
+                <lightning-icon class="custom-icon" icon-name='utility:add' alternative-text='add' size='large' title='add'></lightning-icon>
+            </div>
+            <h2>Add New Note</h2>
+        </div>
+        <div class="box">
+            <header>
+                <h2 class="truncate">Note Heading</h2>
+            </header>
+            <div class="descriptions" >
+                Descriptions come here
+            </div>
+            <footer>
+                <div class="date">Tue Jan 10 2023</div>
+                <div class="delete-edit">
+                    <lightning-icon class="slds-m-right_small edit-icon" icon-name='action:edit' alternative-text='edit' size='x-small' title='edit'></lightning-icon>
+                    <lightning-icon class="delete-icon" icon-name='action:delete' alternative-text='delete' size='x-small' title='delete'></lightning-icon>
+                </div>
+            </footer>
+        </div>
+    </div>
+   <template if:true={showModal}>
+    <c-modal>
+        <h1 slot="header" class="slds-modal_title">Modal Hwading</h1>
+        <div>i am Body</div>
+        <footer slot="footer">
+            <button class="slds-button">Cancel</button>
+            <button class="slds-button">Save</button>
+        </footer>
+    </c-modal>
+   </template> 
+    
+</template>

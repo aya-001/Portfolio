@@ -81,7 +81,7 @@ export default class WeatherApp extends LightningElement {
     loadingCHheck(result){
         if(result.cod === '404'){
             this.loadingError = true
-            this.loadingText = `${this.cityName}is not found`
+            this.loadingText = `${this.cityName} is not found`
         }else{
             this.loadingText = ''
             this.loadingError = false

@@ -65,16 +65,16 @@ export default class PortfolioPersonalProjects extends LightningElement {
         {
             "name":"Survey App",
             "img" : this.Survey,
-            "link":"",
+            "link":"https://sfdx-portfolio-aya-dev-ed.develop.my.site.com/employeeSurvey/s/",
             "code":""
         },
-       /*  {
+         {
             "name":"Note App",
             "img" : this.NoteApp,
             "link":"",
             "code":""
         },
- */
+ 
 
     ]
 
