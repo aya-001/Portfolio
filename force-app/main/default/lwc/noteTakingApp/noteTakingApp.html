@@ -1,4 +1,5 @@
 <template>
+    <c-notification></c-notification>
     <div class="app">
         <div class="box box-centeralize" onclick={createNoteHandler}>
             <div class="dotted-circle">
@@ -13,7 +14,7 @@
             <div class="descriptions" >
                 Descriptions come here
             </div>
-            <footer>
+            <footer class="footer" >
                 <div class="date">Tue Jan 10 2023</div>
                 <div class="delete-edit">
                     <lightning-icon class="slds-m-right_small edit-icon" icon-name='action:edit' alternative-text='edit' size='x-small' title='edit'></lightning-icon>
@@ -22,13 +23,30 @@
             </footer>
         </div>
     </div>
+    <!-- Show Modal Page -->
    <template if:true={showModal}>
     <c-modal>
-        <h1 slot="header" class="slds-modal_title">Modal Hwading</h1>
-        <div>i am Body</div>
+        <h1 slot="header" class="slds-modal_title">Add Note</h1>
+        <form>
+            <!-- input form -->
+            <lightning-input type="text" label="Title" name="Name" 
+            value={defaultNoteForm.Name}
+            class="slds-m-bottom_medium"
+            onchange={changeHandler}></lightning-input>
+            <!-- rich text form -->
+            <lightning-input-rich-text 
+                value={defaultNoteForm.Note_Descriptions__c} 
+                name="Note_Descriptions__c"
+                label="Descriptions"
+                label-visible
+                formats={formats}
+                onchange={changeHandler}>
+            </lightning-input-rich-text>
+
+        </form>
         <footer slot="footer">
-            <button class="slds-button">Cancel</button>
-            <button class="slds-button">Save</button>
+            <button class="slds-button_cancel cancel_button" onclick={canecelHandler}>Cancel</button>
+            <button class="slds-button_save save_button" onclick={saveHandler} disabled={formIsNotFilled}>Save</button>
         </footer>
     </c-modal>
    </template> 
